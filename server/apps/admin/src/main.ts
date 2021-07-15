@@ -4,6 +4,7 @@ import { AdminModule } from './admin.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AdminModule);
+  app.enableCors();
 
   const config = new DocumentBuilder()
     .setTitle('全栈之巅后台管理API')
